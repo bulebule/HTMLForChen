@@ -20,6 +20,6 @@ a.aclass {
 
 body {
 	background-color: #30DFFF;
-	background-image: url('weather_image_12.jpg');
+	background-image: url('../0000-images/weather_image_12.jpg');
 	background-repeat: repeat-x;
 }

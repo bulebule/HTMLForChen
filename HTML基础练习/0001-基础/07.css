@@ -16,8 +16,8 @@ div+h3 {
 }
 
 h4:before {
-	content: url(images/002.jpg);
+	content: url(../0000-images/002.jpg);
 }
 h5:after {
-	content: url(images/003.jpg);
+	content: url(../0000-images/003.jpg);
 }
