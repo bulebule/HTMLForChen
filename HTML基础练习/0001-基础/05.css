@@ -1,0 +1,110 @@
+div {
+	border: 1px solid blue;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+}
+#panel {
+	width: 980px;
+	margin: 0px auto; /* div居中显示 */
+}
+#header {
+	/*background-image: url("");*/
+	height: 132px;
+}
+#logo {
+	width: 290px;
+	height: 98px;
+}
+#menu {
+	height: 32px;
+}
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	background: orange;
+}
+#menu li {
+	float: left; /* 所有列表项水平排列 */
+	width: 84px;
+	height: 32px;
+	text-align: center;
+	list-style: none;
+}
+#menu a,#menu a:hover {
+	color: #333333;
+	text-decoration: none;
+	height: 32px;
+	width: 84px;
+	display: block;
+}
+#menu a:hover {
+	/*background-image: url();*/
+	background: red;
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: white;
+}
+
+#shopping {
+	width: 504px;
+	height: 390px;
+	margin: 0px auto;
+	background: gray;
+	background-repeat: no-repeat;
+	padding: 40px 10px 10px 15px;
+	overflow: hidden; /* div超出部分隐藏 */
+}
+/* 消除dl dt dd 之间的间距 */
+dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+dl {
+	float: left;
+	width: 160px;
+}
+dt {
+	height: 95px;
+	text-align: center;
+	/* 内容垂直居中,只对具有vertical-align属性的标签有效 */
+	vertical-align: middle; 
+	overflow: hidden;
+}
+dd {
+	color: white;
+	font-style: bold;
+	height: 40px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

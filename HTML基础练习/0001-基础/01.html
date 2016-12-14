@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 中文网页需要 -->
+	<meta charset="utf-8">
+	<title>小人物学html</title>
+	<!-- 链接默认链接地址 -->
+	<base target="_blank"></base>
+
+	<script type="text/javascript">
+	function changeLink () {
+		// body...
+		document.getElementById('aid').innerHTML="陈博客"
+		document.getElementById('aid').href="https://bulebule.github.io"
+		document.getElementById('aid').target="_blank"
+	}
+	function getValue() {
+		var x=document.getElementById("myHeader")
+		alert(x.innerHTML)
+	}
+	function createNewDoc() {
+		var newDoc=document.open("text/html","replace");
+		var txt="<html><body>学习DOM</body></html>";
+		newDoc.write(txt);
+		newDoc.close();
+	}
+	function startTime() {
+		var today = new Date()
+		var h=today.getHours()
+		var m=today.getMinutes()
+		var s=today.getSeconds()
+
+		m=checkTime(m)
+		s=checkTime(s)
+		document.getElementById("divID").innerHTML=h+":"+m+":"+s
+		title=setTimeout('startTime()',20)
+
+	}
+	function checkTime(i) {
+		if (i<10) {
+			i="0"+i;
+		};
+		return i;
+	}
+	</script>
+</head>
+<body onload="startTime()">
+	<abbr title="显示完整版">鼠标放在我上面</abbr>
+	<br>
+
+	<h1>我是标题1</h1>
+	<p>该段落文字从左到右显示</p>
+	<a href="https://bulebule.github.io" target="_blank">博客地址</a>
+	<h2>我是标题2</h2>
+	<a id="tips">有用的提示部分</a>
+	<br>
+
+	<a href="http://www.baidu.com"><img src="IMG_5018.JPG" width="68" height="92"></a>
+	<br>
+
+	<a href="#tips">访问有用的提示部分</a>
+	<br>
+
+	<a id="aid" href="http://www.baidu.com" target="_blank">百度</a>
+	<input type="button" onclick="changeLink()" value="改变链接">
+	<br>
+
+	<script type="text/javascript">
+		document.write(document.title)
+		document.write("<br>")
+		document.write(document.URL)
+	</script>
+	<br>
+
+	<h3 id="myHeader" onclick="getValue()">我是标题3</h3>
+	<br>
+
+	<!-- 打开并写入一个新文档 -->
+	<input type="button" value="打开并写入一个新文档" onclick="createNewDoc()">
+	<br>
+
+	<p>时间:</p>
+	<div id="divID"></div>
+</body>
+
+</html>

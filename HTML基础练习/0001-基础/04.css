@@ -1,0 +1,44 @@
+#Container {
+	width: 1000px;
+	margin: 0 auto; /* 设置整个容器在浏览器中水平居中 */
+	background: #CF3;
+}
+#Header {
+	height: 80px;
+	background: #093;
+}
+#logo {
+	padding-left: 50px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+#Content {
+	/* 此处对容器设置了高度,一般不建议对容器设置高度*/
+	/*height: 600px;*/
+	/* 设置容器根据内容自适应高度*/
+	overflow: auto; 
+	margin-top: 20px;
+	background: #0ff;
+}
+#Content-Left {
+	height: 400px;
+	width: 200px;
+	margin: 20px; /* 设置元素跟其他元素的距离为20像素 */
+	float: left; /* 设置浮动,实现多列效果,div+css布局很重要的 */
+	background: #90C;
+}
+#Content-Main {
+	height: 400px;
+	width: 720px;
+	margin: 20px;
+	float: left;
+	background: #90C;
+}
+#Footer {
+	height: 40px;
+	background: #90C;
+	margin-top: 20px;
+}
+.Clear {
+	clear: both;
+}

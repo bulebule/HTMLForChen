@@ -1,0 +1,41 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background-color: gray;
+}
+.clear {
+	clear: both;
+}
+
+#head {
+	background-color: blue;
+	height: 150px;
+}
+#container {
+	background-color: red;
+	width: 960px;
+	height: 800px;
+	margin: 20px auto;
+}
+#content {
+	background-color: yellow;
+	float: left;
+	width: 685px;
+	height: 100%;
+}
+#side {
+	background-color: green;
+	float: right;
+	width: 255px;
+	height: 100%;
+}
+#foot {
+	background-color: white;
+	height: 150px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+

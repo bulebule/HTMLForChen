@@ -1,0 +1,23 @@
+/* 后代选取器 */
+/* 对div下所有的h1进行控制 */
+div h1 {
+	color: red;
+}
+/* 子元素选择器 */
+/* 只能对div 下的h2进行控制 */
+div>h2 {
+	background-color: yellow;
+}
+
+/* 对与div元素相邻的h3有效果 */
+div+h3 {
+	background-color: black;
+	color: white;
+}
+
+h4:before {
+	content: url(images/002.jpg);
+}
+h5:after {
+	content: url(images/003.jpg);
+}

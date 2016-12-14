@@ -1,0 +1,25 @@
+/* 外部样式表 */
+/* 属性选择器 */
+p {
+	color:red;
+	text-align:right;
+	font-size: 19px;
+}
+
+/* id选择器 */
+#pid {
+	color: blue;
+	font-size: 14px;
+}
+/* 类(class)选择器 */
+a.aclass {
+	color: green;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+body {
+	background-color: #30DFFF;
+	background-image: url('weather_image_12.jpg');
+	background-repeat: repeat-x;
+}
