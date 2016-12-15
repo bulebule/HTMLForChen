@@ -1,0 +1,79 @@
+#grad1 {
+	text-align: center;
+	margin: auto;
+	color: #888888;
+	font-size: 40px;
+	font-weight: bold;
+	height: 55px;
+	background: -webkit-linear-gradient(left,red,orange,yellow,green,blue);
+	/*background: linear-gradient(left,red,orange,yellow,green,blue);*/
+}
+#grad2 {
+	height: 150px;
+	width: 150px;
+	background: -webkit-radial-gradient(white,yellow,red,gray);
+	/*background: radial-gradient(left,red,orange,yellow,green,blue);*/
+}
+#grad3 {
+	height: 150px;
+	width: 150px;
+	background: -webkit-radial-gradient(white 5%,yellow 10%,red 50%,gray 100%);
+	/*background: radial-gradient(left,red,orange,yellow,green,blue);*/
+}
+#grad4 {
+	height: 150px;
+	width: 150px;
+	background: -webkit-repeating-radial-gradient(white,yellow 10%,red 15%);
+}
+
+#rcorners1 {
+	border-radius: 25px;
+	background: #8AC007;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+}
+#rcorners2 {
+	border-radius: 25px;
+	border: 2px solid #8AC007;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+}
+#rcorners3 {
+	border-radius: 25px;
+	background: url(../0000-images/weather_image_12.jpg);
+	background-position: left top;
+	background-repeat: repeat;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+}
+#rcorners4 {
+	border-radius: 15px 25px 35px 45px;
+	background: #8AC007;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+}
+#rcorners5 {
+	border-radius: 5px 45px 25px;
+	background: #8AC007;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+}
+#rcorners6 {
+	border-radius: 45px 25px;
+	background: #8AC007;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+}
+#rcorners7 {
+	border-radius: 50%;
+	background: #8AC007;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+}

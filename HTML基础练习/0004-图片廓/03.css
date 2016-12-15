@@ -1,0 +1,27 @@
+img.one {
+	width: 77px;
+	height: 143px;
+	background: url(../0000-images/009.png) 0 0;
+	margin-left: 100px;
+}
+img.two {
+	width: 77px;
+	height: 143px;
+	background: url(../0000-images/009.png) -92px 0;
+	margin-left: 100px;
+}
+img.three {
+	width: 77px;
+	height: 143px;
+	background: url(../0000-images/009.png) -184px 0;
+	margin-left: 100px;
+}
+img.four {
+	width: 77px;
+	height: 143px;
+	background: url(../0000-images/009.png) -276px 0;
+	margin-left: 100px;
+}
+img {
+	margin-left: 20px;
+}

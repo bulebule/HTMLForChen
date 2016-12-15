@@ -1,0 +1,36 @@
+.newspaper {
+	/* 几列 */
+	-webkit-column-count: 3; /* Safari and Chrome */
+	-moz-column-count: 3; /* Firefox */
+	column-count: 3;
+
+	/* 列与列之间的间隔 */
+	-webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+	-moz-column-gap: 40px; /* Firefox */
+	column-gap: 40px;
+
+	/* 列与列边框样式 */
+	-webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+	-moz-column-rule-style: solid; /* Firefox */
+	column-rule-style: solid;
+
+	/* 两列的边框宽度 */
+	-webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+	-moz-column-rule-width: 1px; /* Firefox */
+	column-rule-width: 1px;
+
+	/* 两列的边框颜色 */
+	-webkit-column-rule-color: red; /* Chrome, Safari, Opera */
+	-moz-column-rule-color: red; /* Firefox */
+	column-rule-color: red;
+
+	/* -- 简写
+		-webkit-column-rule: 1px solid red;
+		-moz-column-rule: 1px solid red;
+		column-rule: 1px solid red;
+	*/
+}
+h2 {
+	column-span: all;
+	-webkit-column-span: all; /* Safari and Chrome */
+}

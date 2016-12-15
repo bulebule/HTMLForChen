@@ -1,0 +1,36 @@
+div {
+	width: 100px;
+	height: 100px;
+	background: red;
+	margin-left: 20px;
+}
+div#test1 {
+	transition: width 2s;
+	/*-webkit-transition: width 2s; /* Safari */*/
+}
+div#test1:hover {
+	width: 300px;
+}
+
+div#test2 {
+	-webkit-transition: width 2s,height 2s,-webkit-transform 2s; /* For Safari */
+	transition: width 2s,height 2s,transform 2s;
+}
+div#test2:hover {
+	width: 200px;
+	height: 200px;
+	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+	transform: rotate(180deg);
+}
+div#test3 {
+	/*transition-property: width;
+	transition-duration: 2s;
+	transition-timing-function: linear;
+	transition-delay: 1s;*/
+
+	/* 或 */
+	transition: width 2s linear 1s;
+}
+div#test3:hover {
+	width: 400px;
+}

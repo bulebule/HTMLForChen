@@ -1,0 +1,44 @@
+img {
+	width: 25%;
+	height: auto;
+	float: left;
+	max-width: 2500px;
+}
+.blur {
+	-webkit-filter: blur(3px);
+	/*filter: blur(3px);*/
+}
+.brightness {
+	-webkit-filter: brightness(200%);
+	/*filter: brightness(250%);*/
+}
+.contrast {
+	-webkit-filter: contrast(280%);
+	/*filter: contrast(280%);*/
+}
+.grayscale {
+	-webkit-filter: grayscale(80%);
+	/*filter: grayscale(100%);*/
+}
+.huerotate {
+	-webkit-filter: hue-rotate(90deg);
+	filter: hue-rotate(90deg);
+}
+.invert {
+	-webkit-filter: invert(100%);
+	/*filter: invert(100%);*/
+}
+.opacity {
+	-webkit-filter: opacity(60%);
+	/*filter: opacity(60%);*/
+}
+.saturate {
+	-webkit-filter: saturate(20);
+}
+.sepia {
+	-webkit-filter: sepia(90%);
+}
+.shadow {
+	-webkit-filter: drop-shadow(8px 8px 10px red);
+	filter: drop-shadow(8px 8px 10px red);
+}

@@ -1,0 +1,35 @@
+#navlist {
+	position: relative;
+}
+#navlist li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	border: 1px solid red;
+}
+#navlist li, #navlist a {
+	height: 109px;
+	display: block;
+}
+#one {
+	left: 10px;
+	width: 222px;
+	background: url(../0000-images/008.jpg) 0 0;
+}
+#two {
+	left: 232px;
+	width: 222px;
+	background: url(../0000-images/008.jpg) -262px 0;
+}
+#three {
+	left: 454px;
+	width: 222px;
+	background: url(../0000-images/008.jpg) -524px 0;
+}
+#four {
+	left: 676px;
+	width: 222px;
+	background: url(../0000-images/008.jpg) 0 -151px;
+}
