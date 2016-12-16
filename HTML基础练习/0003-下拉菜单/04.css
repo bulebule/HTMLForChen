@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-family: 'Terminal';
+	font-size: 62.5%;
+}
+body {
+	background-color: #33cc66;
+}
+.heading > h2 {
+	text-align: center;
+	font-family: 'Lobster';
+	font-size: 40px;
+	color: white;
+}
+.select {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 180px;
+}
+.select > p, .select ul {
+	background-color: #ffffff;
+	font-size: 2rem;
+	border: 1px solid bisque;
+	border-radius: 5px;
+	margin-bottom: 0;
+}
+.select > p {
+	text-align: left;
+	padding: 1rem;
+	position: relative;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	cursor: pointer;
+	color: rgba(102,102,102,0.6);
+}
+.select > p:after {
+	display: block;
+	width: 10px;
+	height: 10px;
+	content: '';
+	position: absolute;
+	top: 1.4rem;
+	right: 2rem;
+	border-bottom: 1px solid #33cc66;
+	border-left: 1px solid #33cc66;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transition: -webkit-transform .3s ease-out, top .2s ease-out;
+	transition: transform .3s ease-out, top .2s ease-out;
+}
+.select ul {
+	margin-top: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	list-style-type: none;
+	cursor: pointer;
+	overflow-y: auto;
+	max-height: 0;
+	-webkit-transition: max-height .3s ease-out;
+	transition: max-height .3s ease-out;
+}
+.select ul li {
+	padding-left: 0.5rem;
+	display: block;
+	line-height: 3rem;
+	text-align: left;
+}
+.select.open ul {
+	max-height: 20rem;
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	animation: slide-down .5s ease-in;
+	-webkit-animation: slide-down .5s ease-in;
+}
+.select.open > p:after {
+	position: absolute;
+	top: 1.6rem;
+	-webkit-transform: rotate(-225deg);
+	transform: rotate(-225deg);
+	transition: transform .3s ease-in, top .2s ease-in;
+	-webkit-transition: -webkit-transform .3s ease-in, top .2s ease-in;
+}
+@-webkit-keyframes slide-down {
+	0% {
+		-webkit-transform: scale(1,0);
+	}
+	25% {
+		-webkit-transform: scale(1,1.25);
+	}
+	50% {
+		-webkit-transform: scale(1,0.75);
+	}
+	75% {
+		-webkit-transform: scale(1,1.1);
+	}
+	100% {
+		-webkit-transform: scale(1,1);
+	}
+}
+@keyframes slide-down {
+	0% {
+		transform: scale(1,0);
+	}
+	25% {
+		transform: scale(1,1.25);
+	}
+	50% {
+		transform: scale(1,0.75);
+	}
+	75% {
+		transform: scale(1,1.1);
+	}
+	100% {
+		transform: scale(1,1);
+	}
+}
+.select ul li:hover {
+	background-color: rgba(102,153,102,0.4);
+}
+.select .selected {
+	background-color: rgba(102,153,102,0.8);
+}
