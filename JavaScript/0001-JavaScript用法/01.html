@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>first</title>
+</head>
+<body>
+	<h2>我的第一段 JavaScript</h2>
+	<p id="one">JavaScript能改变HTML元素的内容</p>
+	<p id="two">JavaScript能改变HTML元素的样式</p>
+
+	<script>
+	function changeOne()
+	{
+		x=document.getElementById("one"); // 找到元素
+		if (x.innerHTML.match("hello JavaScript")) {
+			x.innerHTML="JavaScript能改变HTML元素的内容"; // 改变内容
+		} else {
+			x.innerHTML="hello JavaScript"; // 改变内容
+		};
+	}
+	function changeTwo()
+	{
+		x=document.getElementById("two"); // 找到元素
+		x.style.color="red"; // 改变样式
+	}
+	</script>
+
+	<button type="button" onclick="changeOne()">改变内容</button>
+	<button type="button" onclick="changeTwo()">改变样式</button>
+</body>
+</html>
