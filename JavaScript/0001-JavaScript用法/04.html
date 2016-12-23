@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+	#test {
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<button onclick="mFunc()" id="test">点击我</button>
+	<p id="triangle"></p>
+	<hr>
+	<p id="hua"></p>
+	<hr>
+	<p id="guo"></p>
+	<hr>
+	<p id="shan"></p>
+	<hr>
+	<p id="shui"></p>
+	<hr>
+	<p id="lian"></p>
+	<hr>
+	<p id="dong"></p>
+
+	<script>
+	// 判断是否为日期
+	var mDate = new Date();
+	document.getElementById("guo").innerHTML = isDate(mDate);
+	function isDate(md) {
+		return md.constructor.toString().indexOf("Date") > -1;
+	}
+	// for in 用法
+	function mFunc() {
+		var x;
+		var txt = "";
+		var person = {fname:"Bill",lname:"Gates",age:45};
+		for (x in person) {
+			txt = txt + person[x] + " ";
+		}
+		document.getElementById("triangle").innerHTML = txt;
+	}
+	// typeof 用法
+	document.getElementById("hua").innerHTML = 
+		typeof "john" + "<br>" +
+		typeof 3.14 + "<br>" +
+		typeof false + "<br>" +
+		typeof [1,2,3,4] + "<br>" +
+		typeof  {name:"john",age:23};
+	// constructor 返回变量的构造方法
+	document.getElementById("shan").innerHTML = 
+    "john".constructor + "<br>" +
+    (3.14).constructor + "<br>" +
+    false.constructor + "<br>" +
+    [1,2,3,4].constructor + "<br>" +
+    {name:'john', age:34}.constructor + "<br>" +
+    new Date().constructor + "<br>" +
+    function () {}.constructor;
+    // String() 用法
+    var a = 12345;
+    document.getElementById("shui").innerHTML = 
+    String(a) + "<br>" +
+    String(12345) + "<br>" +
+    String(10000+2345);
+
+    document.getElementById("lian").innerHTML = 
+    a.toString() + "<br>" +
+    (12345).toString() + "<br>" +
+    (10000+2345).toString();
+
+    // toExponential转为科学计算法
+    // toFixed 指定小数点保留几位
+    // 把数字格式化为指定长度 9.877e+8
+    document.getElementById("dong").innerHTML = 
+    (1002300).toExponential() + "<br>" +
+    (12.345123678).toFixed(2) + "<br>" +
+    (987654321).toPrecision(4);
+	</script>
+</body>
+</html>
