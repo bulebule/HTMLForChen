@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button onclick="test1()"> 执行test方法 </button>
+	<p id="showTest"></p>
+	<button onclick="exec1()"> 执行exec方法 </button>
+	<p id="showExec"></p>
+	<button onclick="match1()"> 执行match without g方法 </button>
+	<p id="showM1"></p>
+	<button onclick="match2()"> 执行match with g方法 </button>
+	<p id="showM2"></p>
+
+	<script>
+
+	// 如果有匹配的,则打印true,反之false
+	function test1() {
+		var p = new RegExp("e");
+		document.getElementById("showTest").innerHTML = p.test("abcdefg");
+	}
+	// 匹配则显示匹配结果,不匹配则返回null
+	function exec1() {
+		var p = new RegExp("d");
+		document.getElementById("showExec").innerHTML = p.exec("abcdefg");
+	}
+	function match1() {
+		var str = "abcdefdg";
+		document.getElementById("showM1").innerHTML = str.match(/d/);
+	}
+	// 搜索全局.返回数组
+	function match2() {
+		var str = "abcdefdg";
+		document.getElementById("showM2").innerHTML = str.match(/d/g);
+	}
+	</script>
+</body>
+</html>

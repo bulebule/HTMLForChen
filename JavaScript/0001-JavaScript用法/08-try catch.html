@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button onclick="test1()"> 执行test1方法 </button>
+	
+	<p>请输入一个5-10之间的数字</p>
+	<input id="t2" type="text">
+	<button onclick="test2()"> 执行test2方法 </button>
+	<p id="mess"></p>
+
+	<script>
+	var txt="";
+	function test1() {
+		try{
+			adddert("Welcome gurst!")
+		}
+		catch(err) {
+			txt = "本页有一个错误 \n\n"
+			txt += "错误描述: " + err.message + "\n\n";
+			txt += "点击确定继续.\n\n";
+			alert(txt);
+		}
+	}
+	function test2() {
+		try{
+			var x = document.getElementById("t2").value;
+			if (x=="") throw "值为空";
+			if (isNaN(x)) throw "不是数字";
+			if (x>10) throw "太大";
+			if (x<5) throw "太小";
+		}
+		catch(err) {
+			var y = document.getElementById("mess");
+			y.innerHTML="错误:" + err;
+		}
+	}
+	</script>
+</body>
+</html>
