@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<script>
+	function validateForm() {
+		var x = document.forms["mForm"]["fname"].value;
+		if (x==null || x=="") {
+			alert("需要输入名字");
+			return false;
+		};
+	}
+
+	function mFunction() {
+		var x,text;
+		x = document.getElementById("nnn").value;
+		if (isNaN(x) || x<1 || x>10) {
+			text = "输入错误";
+		} else {
+			text = "输入正确";
+		};
+		document.getElementById("ddd").innerHTML = text;
+	}
+	</script>
+</head>
+<body>
+	<form name="mForm" action=".php" onsubmit="return validateForm()" method="post">
+		名字:
+		<input type="text" name="fname">
+		<input type="submit" value="提交">
+	</form>
+	<hr>
+	<p>请输入1到10之间的数字</p>
+	<input id="nnn">
+	<button type="button" onclick="mFunction()">提交</button>
+	<p id="ddd"></p>
+</body>
+</html>
