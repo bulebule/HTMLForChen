@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2> 为JSON 字符串创建对象 </h2>
+	<p id="demo"></p>
+
+	<a href="javascript:void(0)"> 单击此处什么也不会发生 </a>
+	<br>
+	<a href="javascript:void(alert('warning!!!'))"> 不要点我 </a>
+
+	<script>
+	// 不换行
+	var text = '{ "person": [{"firstName":"John","lastName":"Smith"},{"firstName":"Anna","lastName":"Doe"},{"firstName":"Peter","lastName":"Jones"}]}';
+    // 换行
+	var text1 = '{ "person": ['+
+	'{"firstName":"John","lastName":"Wall"},'+
+	'{"firstName":"Anna","lastName":"Meiss"},'+
+	'{"firstName":"Peter","lastName":"Jones"}]}';
+
+	p1 = JSON.parse(text);
+	document.getElementById("demo").innerHTML = p1.person[1].firstName + " " + p1.person[1].lastName;
+	</script>
+</body>
+</html>

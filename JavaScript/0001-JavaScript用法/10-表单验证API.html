@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+	input#v1 {
+		width: 200px;
+	}
+	</style>
+</head>
+<body>
+	<input id="v1" type="number" min="100" max="200" required>
+	<button onclick="mFunction()"> 验证 </button>
+	<p id="p1"></p>
+	<hr>
+	<p>输入数字并点击验证按钮</p>
+	<input id="v2" type="number" min="100" required>
+	<button onclick="mFunc()"> 验证 </button>
+	<p>如果输入的数字小于100,会显示错误信息</p>
+	<p id="p2"></p>
+
+	<script>
+	function mFunction() {
+		var inputObj = document.getElementById("v1");
+		if (inputObj.checkValidity() == false) {
+			document.getElementById("p1").innerHTML = inputObj.validationMessage;
+		};
+	}
+	function mFunc() {
+		var txt = "";
+		var inputObj = document.getElementById("v2");
+		if (!isNumber(inputObj.value)) {
+			txt = "你输入的不是数字";
+		} else if (inputObj.validity.rangeUnderflow) {
+			txt = "输入的值太小";
+		} else {
+			txt = "输入正确";
+		}
+		document.getElementById("p2").innerHTML = txt;
+	}
+	function isNumber(n) {
+		return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+	</script>
+</body>
+</html>
