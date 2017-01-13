@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>全局变量计数</p>
+	<p>这样可以实现计数,但是不调用add()函数,也可以改变计数</p>
+	<button type="button" onclick="mFun1()"> 计数1 </button>
+	<p id="d1" style="color:red">0</p>
+
+	<p>局部变量计数</p>
+	<p>不能实现计数</p>
+	<button type="button" onclick="mFun2()"> 计数2 </button>
+	<p id="d2">0</p>
+
+	<p>闭包-局部变量计数</p>
+	<button type="button" onclick="mFun3()"> 计数3 </button>
+	<p id="d3">0</p>
+
+	<script>
+	var c1 = 0;
+	function add1() {
+		return c1 += 1;
+	}
+	function mFun1() {
+		document.getElementById("d1").innerHTML = add1();
+	}
+
+	function add2() {
+		var c2 = 0;
+		return c2 += 1;
+	}
+	function mFun2() {
+		document.getElementById("d2").innerHTML = add2();
+	}
+
+	// 变量add3 指定了函数自我调用的返回字值
+	// 自我调用函数只执行一次,设置计数器为0,并返回函数表达式
+	// add3变量可以作为一个函数使用,它可以访问函数上一层作用域的计数器
+	// 这个叫JavaScript 闭包,它使得函数拥有私有变量变成可能
+	// 计数器受匿名函数的作用域保护,只能通过add3方法修改
+	var add3 = (function() {
+		var c3 = 0;
+		return function() {return c3 += 1;}
+	})();
+	function mFun3() {
+		document.getElementById("d3").innerHTML = add3();
+	}
+	</script>
+</body>
+</html>

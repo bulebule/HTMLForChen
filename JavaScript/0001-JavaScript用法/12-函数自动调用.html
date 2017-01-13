@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p> 函数可以自动调用: </p>
+	<p> 匿名自我调用函数(没有函数名) </p>
+	<p id="d1" style="color:red"></p>
+	<p> 在HTML中this的值,在全局函数是一个window对象 </p>
+	<p id="d2"></p>
+
+	<script>
+	(function() {
+		document.getElementById("d1").innerHTML = "自己调用的";
+	})();
+
+	function mFunc() {
+		return this;
+	}
+	document.getElementById("d2").innerHTML = mFunc();
+	</script>
+</body>
+</html>

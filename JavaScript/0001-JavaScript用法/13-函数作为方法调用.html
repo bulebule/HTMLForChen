@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p id="d1" style="color:red"></p>
+
+	<script>
+	var mObject = {
+		firstName:"John",
+		lastName:"Doe",
+		fullName:function() {
+			return this.firstName + " " + this.lastName;
+		}
+	}
+	document.getElementById("d1").innerHTML = mObject.fullName();
+	</script>
+</body>
+</html>
