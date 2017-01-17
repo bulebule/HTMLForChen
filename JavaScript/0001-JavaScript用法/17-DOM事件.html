@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1 onclick="this.innerHTML='哇哈哈'">点击文本</h1>
+	<h2 onmouseover="style.color='red'" onmouseout="style.color='black'">将鼠标移至文本上</h2>
+
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;"> Mouse Over Me </div>
+
+	<script>
+	function mOver(m1) {
+		m1.innerHTML = "Thank You";
+	}
+	function mOut(m1) {
+		m1.innerHTML = "Goodbye";
+	}
+	</script>
+</body>
+</html>
