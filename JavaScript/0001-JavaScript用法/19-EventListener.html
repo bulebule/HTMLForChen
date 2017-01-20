@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p> 使用addEventListener()方法在同一个按钮中添加多个事件 </p>
+	<div id="did" style="width:100px;height:100px;background-color:red;margin-top:50px;">
+		我是谁</div>
+
+	<p> 使用addEventListener()方法传递参数 </p>
+	<button id="mBtn"> 点我 </button>
+	<p id="pid"></p>
+
+	<script>
+	var x = document.getElementById("did");
+	x.addEventListener("mouseover",mFun);
+	x.addEventListener("click",mFun2);
+	x.addEventListener("mouseout",mFun3);
+
+	var s1 = 5;
+	var s2 = 9;
+	document.getElementById("mBtn").addEventListener("click", function(){mFun4(s1,s2)});
+
+	function mFun() {
+		x.style.backgroundColor = "yellow";
+	}
+	function mFun2() {
+		x.style.backgroundColor = "green";
+	}
+	function mFun3() {
+		x.style.backgroundColor = "red";
+	}
+
+	function mFun4(a,b) {
+		var result = a*b;
+		document.getElementById("pid").innerHTML = result;
+	}
+	</script>
+</body>
+</html>
